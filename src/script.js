@@ -1,5 +1,5 @@
+// adding tasks to the list
 let addTaskButton = document.getElementById("add-task-button");
-
 addTaskButton.addEventListener("click", function () {
     let checkbox = document.createElement("input");
     checkbox.setAttribute("type", "checkbox");
@@ -26,6 +26,7 @@ addTaskButton.addEventListener("click", function () {
     document.querySelector("input").value = "";
 });
 
+// deleting tasks
 let deleteBtns = document.getElementsByClassName("delete-btn");
 for(let i = 0; i < deleteBtns.length; i++) {
     deleteBtns[i].addEventListener("click", function () {
