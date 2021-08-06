@@ -11,6 +11,9 @@ addTaskButton.addEventListener("click", function () {
     let deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
     deleteBtn.innerHTML = "X";
+    deleteBtn.addEventListener("click", function () {
+        deleteBtn.parentNode.parentNode.removeChild(deleteBtn.parentNode);
+    });
 
     let listItem = document.createElement("li");
     listItem.appendChild(checkbox);
@@ -23,4 +26,9 @@ addTaskButton.addEventListener("click", function () {
     document.querySelector("input").value = "";
 });
 
-// TODO: removing elements
+let deleteBtns = document.getElementsByClassName("delete-btn");
+for(let i = 0; i < deleteBtns.length; i++) {
+    deleteBtns[i].addEventListener("click", function () {
+        deleteBtns[i].parentNode.parentNode.removeChild(deleteBtns[i].parentNode);
+    });
+}
