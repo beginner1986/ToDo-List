@@ -70,7 +70,7 @@ function createSpan(text) {
 function createDeleteBtn() {
     let deleteBtn = document.createElement("button");
     deleteBtn.classList.add("delete-btn");
-    deleteBtn.innerHTML = "X";
+    deleteBtn.innerHTML = "<i class=\"fa fa-trash\"></i>";
     deleteBtn.addEventListener("click", function () {
         deleteBtn.parentNode.parentNode.removeChild(deleteBtn.parentNode);
     });
