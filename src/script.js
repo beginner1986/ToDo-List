@@ -19,11 +19,10 @@ addTaskButton.addEventListener("click", function () {
 
 // deleting tasks
 let deleteBtns = document.getElementsByClassName("delete-btn");
+
 for(let i = 0; i < deleteBtns.length; i++) {
     deleteBtns[i].addEventListener("click", function () {
         taskList.splice(i, 1);
-        deleteBtns[i].parentNode.parentNode.removeChild(deleteBtns[i].parentNode);
-
         saveToLocalStorage();
     });
 }
